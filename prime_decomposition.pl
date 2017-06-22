@@ -8,10 +8,8 @@
 use strict;
 use warnings;
 
-sub prime_factors{
-    
-    my($n, $p, @out) = (shift, 3);
-    
+sub prime_factors{    
+    my($n, $p, @out) = (shift, 3);    
     return if $n < 1;
     
     while (!($n&1)) {
@@ -25,8 +23,6 @@ sub prime_factors{
         $p += 2;
      
     }
-
     push @out, $n if $n > 1;
     @out;
-
 }
